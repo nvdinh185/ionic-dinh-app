@@ -5,6 +5,7 @@ import { HomePage } from '../home/home';
 import { YoutubePage } from '../youtube/youtube';
 import { ShopPage } from '../shop/shop';
 import { HocvienPage } from '../hocvien/hocvien';
+import { LoginPage } from '../login/login';
 
 @Component({
   selector: 'page-header',
@@ -33,5 +34,9 @@ export class HeaderPage {
 
   hocVien(){
     this.navCtrl.push(HocvienPage);
+  }
+
+  login(){
+    this.navCtrl.push(LoginPage);
   }
 }
