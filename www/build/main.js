@@ -184,7 +184,7 @@ var PostUserProvider = /** @class */ (function () {
         this.http = http;
     }
     PostUserProvider.prototype.register = function (value) {
-        var url = 'https://dinh-server.herokuapp.com/signup';
+        var url = 'https://dinh-angular-app.herokuapp.com/signup';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var body = JSON.stringify(value);
         return this.http.post(url, body, { headers: headers })
@@ -192,7 +192,7 @@ var PostUserProvider = /** @class */ (function () {
             .then(function (res) { return res.json(); });
     };
     PostUserProvider.prototype.login = function (value) {
-        var url = 'https://dinh-server.herokuapp.com/login';
+        var url = 'https://dinh-angular-app.herokuapp.com/login';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var body = JSON.stringify(value);
         return this.http.post(url, body, { headers: headers })
@@ -200,7 +200,7 @@ var PostUserProvider = /** @class */ (function () {
             .then(function (res) { return res.json(); });
     };
     PostUserProvider.prototype.logout = function (value) {
-        var url = 'https://dinh-server.herokuapp.com/logout';
+        var url = 'https://dinh-angular-app.herokuapp.com/logout';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var body = JSON.stringify(value);
         return this.http.post(url, body, { headers: headers })
@@ -209,9 +209,10 @@ var PostUserProvider = /** @class */ (function () {
     };
     PostUserProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
     ], PostUserProvider);
     return PostUserProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=post-user.js.map
@@ -348,7 +349,7 @@ var ShopPage = /** @class */ (function () {
         this.navParams = navParams;
     }
     ShopPage.prototype.ionViewDidLoad = function () {
-        this.listHoa = this.httpClient.get('https://dinh-server.herokuapp.com/hoa')
+        this.listHoa = this.httpClient.get('https://dinh-angular-app.herokuapp.com/hoa')
             .map(function (res) { return res['results']; });
     };
     ShopPage.prototype.Buy = function (hoa) {
@@ -358,9 +359,10 @@ var ShopPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-shop',template:/*ion-inline-start:"D:\DINHNV\MyData\LapTrinhDiDong\IONIC_Baitap\dinh-app\src\pages\shop\shop.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>shop</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <page-header></page-header>\n\n\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col *ngFor="let objHoa of listHoa | async">\n\n        <ion-card>\n\n          <h4>Ten hoa: {{ objHoa.ten }}</h4>\n\n          <img [src]="objHoa.anh" />\n\n          <p>Gia ban: {{ objHoa.gia }}</p>\n\n          <button ion-button color="secondary" (click)="Buy(objHoa)">Chọn hoa này</button>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  \n\n  <page-footer></page-footer>\n\n</ion-content>'/*ion-inline-end:"D:\DINHNV\MyData\LapTrinhDiDong\IONIC_Baitap\dinh-app\src\pages\shop\shop.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
     ], ShopPage);
     return ShopPage;
+    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=shop.js.map
@@ -621,7 +623,7 @@ var GetHocVienProvider = /** @class */ (function () {
         this.http = http;
     }
     GetHocVienProvider.prototype.getHocVien = function () {
-        var url = 'https://dinh-server.herokuapp.com/hocvien-ionic';
+        var url = 'https://dinh-angular-app.herokuapp.com/hocvien-ionic';
         return this.http.get(url)
             .toPromise()
             .then(function (res) { return res; });

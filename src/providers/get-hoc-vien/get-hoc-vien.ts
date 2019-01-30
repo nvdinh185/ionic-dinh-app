@@ -8,7 +8,7 @@ export class GetHocVienProvider {
   }
 
   getHocVien(){
-    const url = 'https://dinh-server.herokuapp.com/hocvien-ionic';
+    const url = 'https://dinh-angular-app.herokuapp.com/hocvien-ionic';
     return this.http.get(url)
     .toPromise()
     .then(res => res);

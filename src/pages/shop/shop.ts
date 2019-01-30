@@ -17,7 +17,7 @@ export class ShopPage {
   }
 
   ionViewDidLoad() {
-    this.listHoa = this.httpClient.get('https://dinh-server.herokuapp.com/hoa')
+    this.listHoa = this.httpClient.get('https://dinh-angular-app.herokuapp.com/hoa')
     .map(res => res['results']);
   }
   
