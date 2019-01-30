@@ -184,7 +184,7 @@ var PostUserProvider = /** @class */ (function () {
         this.http = http;
     }
     PostUserProvider.prototype.register = function (value) {
-        var url = 'https://dinh-angular-app.herokuapp.com/signup';
+        var url = 'https://dinh-app.herokuapp.com/signup';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var body = JSON.stringify(value);
         return this.http.post(url, body, { headers: headers })
@@ -192,7 +192,7 @@ var PostUserProvider = /** @class */ (function () {
             .then(function (res) { return res.json(); });
     };
     PostUserProvider.prototype.login = function (value) {
-        var url = 'https://dinh-angular-app.herokuapp.com/login';
+        var url = 'https://dinh-app.herokuapp.com/login';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var body = JSON.stringify(value);
         return this.http.post(url, body, { headers: headers })
@@ -200,7 +200,7 @@ var PostUserProvider = /** @class */ (function () {
             .then(function (res) { return res.json(); });
     };
     PostUserProvider.prototype.logout = function (value) {
-        var url = 'https://dinh-angular-app.herokuapp.com/logout';
+        var url = 'https://dinh-app.herokuapp.com/logout';
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Headers */]({ 'Content-Type': 'application/json' });
         var body = JSON.stringify(value);
         return this.http.post(url, body, { headers: headers })
@@ -349,7 +349,7 @@ var ShopPage = /** @class */ (function () {
         this.navParams = navParams;
     }
     ShopPage.prototype.ionViewDidLoad = function () {
-        this.listHoa = this.httpClient.get('https://dinh-angular-app.herokuapp.com/hoa')
+        this.listHoa = this.httpClient.get('https://dinh-app.herokuapp.com/hoa')
             .map(function (res) { return res['results']; });
     };
     ShopPage.prototype.Buy = function (hoa) {
@@ -623,16 +623,17 @@ var GetHocVienProvider = /** @class */ (function () {
         this.http = http;
     }
     GetHocVienProvider.prototype.getHocVien = function () {
-        var url = 'https://dinh-angular-app.herokuapp.com/hocvien-ionic';
+        var url = 'https://dinh-app.herokuapp.com/hocvien-ionic';
         return this.http.get(url)
             .toPromise()
             .then(function (res) { return res; });
     };
     GetHocVienProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
     ], GetHocVienProvider);
     return GetHocVienProvider;
+    var _a;
 }());
 
 //# sourceMappingURL=get-hoc-vien.js.map
