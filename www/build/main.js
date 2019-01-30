@@ -209,10 +209,9 @@ var PostUserProvider = /** @class */ (function () {
     };
     PostUserProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]])
     ], PostUserProvider);
     return PostUserProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=post-user.js.map
@@ -359,10 +358,9 @@ var ShopPage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-shop',template:/*ion-inline-start:"D:\DINHNV\MyData\LapTrinhDiDong\IONIC_Baitap\dinh-app\src\pages\shop\shop.html"*/'<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>shop</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <page-header></page-header>\n\n\n\n  <ion-grid>\n\n    <ion-row>\n\n      <ion-col *ngFor="let objHoa of listHoa | async">\n\n        <ion-card>\n\n          <h4>Ten hoa: {{ objHoa.ten }}</h4>\n\n          <img [src]="objHoa.anh" />\n\n          <p>Gia ban: {{ objHoa.gia }}</p>\n\n          <button ion-button color="secondary" (click)="Buy(objHoa)">Chọn hoa này</button>\n\n        </ion-card>\n\n      </ion-col>\n\n    </ion-row>\n\n  </ion-grid>\n\n  \n\n  <page-footer></page-footer>\n\n</ion-content>'/*ion-inline-end:"D:\DINHNV\MyData\LapTrinhDiDong\IONIC_Baitap\dinh-app\src\pages\shop\shop.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]) === "function" && _c || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
     ], ShopPage);
     return ShopPage;
-    var _a, _b, _c;
 }());
 
 //# sourceMappingURL=shop.js.map
@@ -630,10 +628,9 @@ var GetHocVienProvider = /** @class */ (function () {
     };
     GetHocVienProvider = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_0__angular_common_http__["a" /* HttpClient */]])
     ], GetHocVienProvider);
     return GetHocVienProvider;
-    var _a;
 }());
 
 //# sourceMappingURL=get-hoc-vien.js.map
